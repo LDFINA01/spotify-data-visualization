@@ -47,11 +47,13 @@ def run_app():
                 else:
                     st.write("No profile picture available.")
 
-                st.subheader(f"Welcome to your Wrap, {user_name}")
+                st.subheader(f"Welcome to your Wrap, {user_name} 🎉")
+
+                st.markdown("<br><br>", unsafe_allow_html=True)
 
                 top_tracks = get_top_tracks(spotify_client)
                 if top_tracks and top_tracks.get("items"):
-                    st.write("### Your Top Tracks:")
+                    st.write("### Most Listened Tracks Over the Past Year:")
                     for idx, track in enumerate(top_tracks["items"]):
                         track_name = track.get("name", "Unknown")
                         artists = ", ".join([artist.get("name", "Unknown") for artist in track.get("artists", [])])
