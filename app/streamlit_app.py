@@ -29,7 +29,7 @@ def run_app():
                 profile_image_url = user_info['images'][0]['url'] if user_info['images'] else None
                 if profile_image_url:
                     if profile_image_url:
-                        # Use custom CSS to make the image round and smaller
+                        # --- Uses custom CSS to make the image round and smaller ---
                         st.markdown(
                             f"""
                             <style>
